@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بلدية سيدي لخضر</title>
+    <style>button:hover {
+    background-color: #219150; /* درجة أغمق من الأخضر */
+    cursor: pointer;
+    letter-spacing: 1px; /* تباعد بسيط بين الحروف يعطي جمالية */
+    transition: 0.4s;
+}
+input:focus, select:focus {
+    border-color: #27ae60 !important; /* أخضر جزائري */
+    box-shadow: 0 0 8px rgba(39, 174, 96, 0.3);
+    outline: none;
+    transform: scale(1.02); /* تكبير بسيط جداً للخانة */
+    transition: 0.3s; /* نعومة في الحركة */
+}
+
+        body { font-family: sans-serif; background-color: #f0f4f8; margin: 0; padding: 0; }
+        header { background: #1a5276; color: white; padding: 20px; text-align: center; border-bottom: 5px solid #27ae60; }
+        .box { max-width: 500px; margin: 20px auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h2 { color: #1a5276; text-align: center; }
+        label { display: block; margin: 10px 0 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+        button { width: 100%; padding: 15px; background: #27ae60; color: white; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; }
+        button:hover { background: #1e8449; }
+        footer { text-align: center; font-size: 0.8em; margin-top: 20px; color: #777; }
+    </style>
+</head>
+<body><div style="background-color: #f39c12; color: white; text-align: center; padding: 12px 50px; font-weight: bold; font-size: 0.9em; position: relative; line-height: 1.5; direction: rtl;">
+    <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 20px;"></span>
+    ⚠️ تنبيه: هذا الموقع نسخة تجريبية (Demo) فقط. يرجى عدم إدخال معلومات حقيقية.
+</div>
+<div style="position: absolute; top: 10px; left: 10px; font-size: 25px;">🇩🇿</div>
+
+
+<header>
+    <h1>بلدية سيدي لخضر</h1>
+    <p>ولاية عين الدفلى</p>
+</header>
+
+<div class="box">
+    <h2>طلب وثيقة إدارية</h2>
+    <form action="https://formspree.io/f/mojlqpod" method="POST">
+    
+     <label>الاسم واللقب:</label>
+<input type="text" name="Full_Name" required>
+     <label for="birth_date">تاريخ الميلاد:</label>
+<input type="date" id="birth_date" name="Birth_Date" required 
+       style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; display: block;">
+<label>رقم التعريف الوطني (NIN):</label>
+<input type="number" name="NIN_Number" required>
+
+<label>نوع الوثيقة المطلوبة:</label>
+<select name="Document_Type">
+    <option value="شهادة ميلاد">شهادة ميلاد</option>
+    <option value="شهادة عائلية">شهادة عائلية</option>
+    <option value="شهادة إقامة">شهادة إقامة</option> <option value="عقد زواج">عقد زواج</option>
+</select>
+
+
+
+        <label>رقم الهاتف:</label>
+        <input type="tel" name="phone" required>
+
+        <button type="submit">إرسال الطلب</button>
+        <div style="margin-bottom: 15px; font-size: 0.9em; color: #555; display: flex; align-items: flex-start; gap: 10px;">
+    <input type="checkbox" id="privacy_agree" required style="width: auto; margin-top: 5px;">
+    <label for="privacy_agree" style="font-weight: normal; cursor: pointer;">
+        أوافق على <a href="#privacyModal" onclick="openModal()" style="color: #1a5276; text-decoration: underline;">سياسة الخصوصية</a> ومعالجة بياناتي لأغراض إدارية.
+    </label>
+</div>
+
+    </form>
+</div>
+
+<footer>
+    <p>قسم التطوير الرقمي و الابتكار -2026&copy; </p>
+</footer>
+<div id="privacyModal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); overflow: auto;">
+    <div class="box" style="margin: 10% auto; max-width: 600px; position: relative;">
+        <span onclick="closeModal()" style="position: absolute; left: 20px; top: 10px; font-size: 28px; cursor: pointer;">&times;</span>
+        <h2 style="color: #27ae60;">سياسة الخصوصية</h2>
+        <div style="text-align: justify; line-height: 1.6; font-size: 0.95em;">
+            <p><strong>1. جمع البيانات:</strong> يتم جمع الاسم، تاريخ الميلاد، ورقم التعريف الوطني لغرض معالجة طلبات الوثائق الإدارية فقط.</p>
+            <p><strong>2. سرية المعلومات:</strong> يلتزم قسم التطوير الرقمي ببلدية سيدي لخضر بعدم مشاركة هذه البيانات مع أي أطراف خارجية غير مخولة.</p>
+            <p><strong>3. الأمان:</strong> نستخدم تقنيات تشفير لضمان وصول بياناتك إلى مصلحة الحالة المدنية بشكل آمن.</p>
+            <p><strong>4. مسؤولية المستخدم:</strong> أنت مسؤول عن صحة البيانات المدخلة في هذا النموذج.</p>
+        </div>
+        <button onclick="closeModal()" style="margin-top: 20px;">فهمت ذلك</button>
+    </div>
+</div>
+
+</body><script>
+const form = document.querySelector('form');
+
+form.onsubmit = function(e) {
+    e.preventDefault(); 
+
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+            showSuccessMessage();
+        } else {
+            alert("عذراً، حدث خطأ في الإرسال. حاول مجدداً.");
+        }
+    });
+};                                                                                                                                                                                                                                                                                                                                        
+
+// هذه هي الدالة المحدثة التي يجب استبدالها
+function showSuccessMessage() {
+    let seconds = 5;
+    document.body.innerHTML = `
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center; font-family: sans-serif; background-color: #f4f7f6; direction: rtl;">
+            <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); max-width: 90%;">
+                <div style="font-size: 70px;">✅</div>
+                <h1 style="color: #2c3e50; margin-top: 20px;">تم إرسال طلبك بنجاح!</h1>
+                <p style="color: #7f8c8d; font-size: 18px;">شكراً لك.. تم تسجيل طلبك في نظام بلدية سيدي لخضر.</p>
+                <div style="margin-top: 20px; font-weight: bold; color: #e74c3c;">
+                    سيتم العودة للرئيسية خلال <span id="count">5</span> ثوانٍ...
+                </div>
+            </div>
+        </div>
+    `;
+
+    const interval = setInterval(() => {
+        seconds--;
+        const countElement = document.getElementById('count');
+        if (countElement) {
+            countElement.textContent = seconds;
+        }
+
+        if (seconds <= 0) {
+            clearInterval(interval);
+            // هذا هو السطر الذي سيحل مشكلة العودة للرئيسية
+            window.location.href = window.location.pathname;
+        }
+    }, 1000);
+}
+
+// دوال سياسة الخصوصية
+function openModal() {
+    document.getElementById('privacyModal').style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById('privacyModal').style.display = "none";
+}
+
+window.onclick = function(event) {
+    let modal = document.getElementById('privacyModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// حماية الكود
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.onkeydown = function(e) {
+    if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 85)) {
+        return false;
+    }
+};                                                            
+</script>
+
+
+</html>
+
+    
